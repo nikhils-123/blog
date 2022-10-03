@@ -1,0 +1,15 @@
+
+
+
+<%= form_with model: @employee do |form| %>
+	<p>
+		<%= form.label :Name %>
+		<%= form.text_field :name %>
+	</p>
+
+	<%= form.file_field :images, multiple: true %><br>
+
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', employees_path %></p>

@@ -1,0 +1,28 @@
+<h1 class="text-danger">All Suppliers</h1>
+
+<h4>Has One Association</h4>
+
+<table cellpadding="0" cellspacing="0" border="1px" bgcolor="#eee" width="200px">
+	<thead>
+		<tr>
+			<th>SN</th>
+			<th>Name</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% @suppliers.each do |supplier| %>
+			<tr>
+				<td><strong><%= supplier.id %></strong></td>
+				<td><%= supplier.name %></td>
+				<td><%= link_to 'Show', supplier_path(supplier) %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+
+<p><%= link_to 'New Supplier', new_supplier_path %></p>
+<p><%= link_to 'All Accounts', accounts_path %></p>
+<p><%= link_to 'New Account', new_account_path %></p>
+<p><%= link_to 'New Account History', new_account_history_path %></p>

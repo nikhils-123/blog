@@ -1,0 +1,12 @@
+
+<%= form_with model: @assembly do |form| %>
+
+	<p>
+		<%= form.label :Part_Number %>
+		<%= form.select :part_id, options_for_select(Part.all.map{|b| [b.part_number, b.id]}) %>
+	</p>
+
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', assembly_path %></p>

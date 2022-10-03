@@ -1,0 +1,30 @@
+
+<h1 class="text-danger">All Persons</h1>
+
+<table cellpadding="0" cellspacing="0" border="1px" bgcolor="#eee">
+	<thead>
+		<tr>
+			<th>User ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Confirmation</th>
+			<th>Shows</th>
+			<th>Dates</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @persons.each do |person| %>
+			<tr>
+				<td><strong><%= person.id %></strong></td>
+				<td><strong>Name: </strong> <%= person.name %></td>
+				<td><strong>Email: </strong> <%= person.email %></td>
+				<td><strong>Confirmation: </strong> <%=person.confirmation%></td>
+				<td><strong>Start Date: </strong> <%=person.start_date%></td>
+				<td><strong>End Date: </strong> <%=person.end_date%></td>
+				<td><%= link_to 'Show', person_path(person) %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+<p><%= link_to 'New', new_person_path %></p>

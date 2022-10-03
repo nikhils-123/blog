@@ -1,0 +1,17 @@
+
+<%= form_with model: @account_history do |form| %>
+
+	<p>
+		<%= form.label :Holder_name %>
+		<%= form.select :account_id, options_for_select(AccountHistory.all.map{|b| [b.credit_rating, b.id]}) %>
+	</p>
+
+	<p>
+		<%= form.label :Rating %>
+		<%= form.text_field :credit_rating %>
+	</p>
+
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', account_histories_path %></p>

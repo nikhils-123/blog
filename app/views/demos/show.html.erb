@@ -1,0 +1,32 @@
+<h1>Show User</h1>
+<p>
+	<strong>Name: </strong> <%= @demo.name %>
+</p>
+
+<p>
+	<strong>User Name: </strong> <%= @demo.user_name %>
+</p>
+
+<p>
+	<strong>Role: </strong> <%= @demo.role %>
+</p>
+
+<p>
+	<strong>Email: </strong> <%= @demo.email %>
+</p>
+
+
+<p>
+	<strong>Password: </strong> <%= @demo.password %>
+</p>
+
+
+<p>
+	<strong>Password Confirmation: </strong> <%= @demo.password_confirmation %>
+</p>
+
+<p>
+	<strong>Age: </strong> <%= @demo.age %>
+</p>
+
+<div><%= link_to 'Back', demos_path, style: 'background-color: teal; padding: 6px 8px;border-radius: 6px; border: 1px solid #f00; color: #fff;text-transform:uppercase;text-decoration:none' %></div>

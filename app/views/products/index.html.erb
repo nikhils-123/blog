@@ -1,0 +1,22 @@
+<h1 class="text-danger">All Products</h1>
+
+<table cellpadding="0" cellspacing="0" border="1px" bgcolor="#eee">
+	<thead>
+		<tr>
+			<th>SN</th>
+			<th>Name</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% @products.each do |product| %>
+			<tr>
+				<td><strong><%= product.id %></strong></td>
+				<td><strong>Name: </strong> <%= product.name %></td>
+				<td><%= link_to 'Show', product_path(product) %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+<p><%= link_to 'New Product', new_product_path %></p>

@@ -1,0 +1,17 @@
+<h1>New Email</h1>
+
+
+<%= form_with model: @persons do |form| %>
+	<p>
+		<%= form.label :name %>
+		<%= form.text_field :name %>
+	</p>
+	<p>
+		<%= form.label :email %>
+		<%= form.text_field :email %>
+	</p>
+	
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', persons_path %></p>

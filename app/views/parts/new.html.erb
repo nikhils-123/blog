@@ -1,0 +1,12 @@
+
+<%= form_with model: @part do |form| %>
+
+	<p>
+		<%= form.label :Part_Number %>
+		<%= form.text_field :part_number %>
+	</p>
+
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', parts_path %></p>

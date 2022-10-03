@@ -1,0 +1,11 @@
+
+<%= form_with model: @supplier do |form| %>
+	<p>
+		<%= form.label :Name %>
+		<%= form.text_field :name %>
+	</p>
+
+	<p><%= form.submit %></p>
+<%end%>
+
+<p><%= link_to 'Back', suppliers_path %></p>

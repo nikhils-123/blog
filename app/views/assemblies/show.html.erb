@@ -1,0 +1,19 @@
+
+<h1>Show Assemblies</h1>
+
+<p>
+	<strong>Name: </strong> <%= @assembly.name %>
+</p>
+
+<h4>Assemblies</h4>
+
+<% @assembly.parts.each do |part| %>
+  <%= part.part_number %><br>
+<% end %>
+
+<p><%= link_to 'Assign_part', edit_assembly_path(@assembly) %></p>
+
+
+<div><%= link_to 'Back', assemblies_path, style: 'background-color: teal; padding: 6px 8px;border-radius: 6px; border: 1px solid #f00; color: #fff;text-transform:uppercase;text-decoration:none' %></div>
+<hr>
+

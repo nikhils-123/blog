@@ -1,0 +1,28 @@
+<h1 class="text-danger">All Assemblies</h1>
+
+<h4>Has and Belongs To Many Association</h4>
+
+<table cellpadding="0" cellspacing="0" border="1px" bgcolor="#eee" width="200px">
+	<thead>
+		<tr>
+			<th>SN</th>
+			<th>Name</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% @assemblies.each do |assembly| %>
+			<tr>
+				<td><strong><%= assembly.id %></strong></td>
+				<td><%= assembly.name %></td>
+				<td><%= link_to 'Show', assembly_path(assembly) %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+<p><%= link_to 'New Assembly', new_assembly_path %></p>
+<p><%= link_to 'All Parts', parts_path %></p>
+<p><%= link_to 'New Part', new_part_path %></p>
+
+

@@ -1,0 +1,34 @@
+
+<h1 class="text-danger">All User</h1>
+
+<table cellpadding="0" cellspacing="0" border="1px" bgcolor="#eee">
+	<thead>
+		<tr>
+			<th>SN</th>
+			<th>Name</th>
+			<th>User_Name</th>
+			<th>Role</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Password_confirmation</th>
+			<th>Age</th
+		</tr>
+	</thead>
+	<tbody>
+		<% @demos.each do |demo| %>
+			<tr>
+				<td><strong><%= demo.id %></strong></td>
+				<td><strong>Name: </strong> <%= demo.name %></td>
+				<td><strong>User_Name: </strong> <%= demo.user_name %></td>
+				<td><strong>Role: </strong> <%=demo.role%></td>
+				<td><strong>Email: </strong> <%= demo.email %></td>
+				<td><strong>Password: </strong> <%=demo.password%></td>
+				<td><strong>Password_confirmation: </strong> <%=demo.password_confirmation%></td>
+				<td><strong>Age: </strong> <%=demo.age%></td>
+				<td><%= link_to 'Show', demo_path(demo) %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+<p><%= link_to 'New', new_demo_path %></p>
