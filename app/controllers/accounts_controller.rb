@@ -16,6 +16,19 @@ class AccountsController < ApplicationController
     end
   end
 
+  def account_creation
+    return render json: {message: "Account with this supplier ID is already exist"} if Supplier.find_by(id: accounts_params[:supplier_id]).account.present?
+    accounts_params[:supplier_id]
+    @account = Account.new(accounts_params)
+    if @account.save
+      render json: @account
+    else
+      render json: {message: "wrong!"}
+    end
+  end
+
+   
+
   def show
     @account = Account.find(params[:id])
   end
