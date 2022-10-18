@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 
@@ -26,6 +28,7 @@ Rails.application.routes.draw do
     post :account_creation, on: :collection
     resources :account_histories
   end
+  get "terms_and_conditions", to: "accounts#terms_and_conditions"
   post "authors/:author_id/books", to: "authors#book_creation_by_author"
 
   #root "assemblies#index"

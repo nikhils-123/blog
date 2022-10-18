@@ -27,7 +27,9 @@ class AccountsController < ApplicationController
     end
   end
 
-   
+   def terms_and_conditions
+      render json: TermsAndCondition.last, status: 200
+   end
 
   def show
     @account = Account.find(params[:id])

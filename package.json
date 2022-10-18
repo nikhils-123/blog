@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "activeadmin_quill_editor": "blocknotes/activeadmin_quill_editor",
     "bootstrap": "^5.2.2",
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",

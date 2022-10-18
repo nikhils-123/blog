@@ -74,6 +74,13 @@ end
 
 gem 'byebug'
 
+gem 'devise'
+gem 'activeadmin'
+gem 'sass-rails', '>= 5'
+gem 'activeadmin_quill_editor'
+gem 'sassc'
+
+
 gem "image_processing", ">= 1.2"
 gem "mini_magick"
 
